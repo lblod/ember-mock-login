@@ -1,0 +1,17 @@
+{{errorMessage}}
+{{#unless loading}}
+  {{#each users as |user|}}
+    <div style="cursor: pointer" class="person-info" onclick={{action 'login' user}}>
+      <div class="person-info__img">
+        {{#if user.img}}
+          <img src="{{user.img}}" alt="" />
+        {{/if}}
+      </div>
+      <div class="person-info__content">
+        <dl class="person-info__data">
+          {{yield user (hash info=(component 'login/user-info'))}}
+        </dl>
+      </div>
+    </div>
+  {{/each}}
+{{/unless}}

@@ -1,3 +1,13 @@
 <h2 id="title">Welcome to Ember</h2>
 
+{{#if session.isAuthenticated}}
+  Logged in as {{session.account.user.firstName}} {{sesion.account.user.lastName}} with activeGroup {{session.activeGroup.name}}
+  {{mock-logout}}
+{{else}}
+  {{#mock-login users=accounts as |account definition|}}
+    {{definition.info label="Firstname" value= account.user.firstName}}
+    {{definition.info label="Lastname" value =account.user.lastName}}
+    {{definition.info label="Group" value=account.user.groups.name}}
+  {{/mock-login}}
+{{/if}}
 {{outlet}}

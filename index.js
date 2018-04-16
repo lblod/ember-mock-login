@@ -1,5 +1,5 @@
 'use strict';
 
 module.exports = {
-  name: 'ember-mock-login'
+  name: '@lblod/ember-mock-login'
 };
