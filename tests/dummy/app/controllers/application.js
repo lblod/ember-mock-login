@@ -3,6 +3,7 @@ import { inject as service } from '@ember/service';
 
 export default Controller.extend({
   session: service('session'),
+  // eslint-disable-next-line ember/avoid-leaking-state-in-ember-objects
   accounts: [
     {
       id: 'e842a393-1252-4e06-bab4-18df36c53808',

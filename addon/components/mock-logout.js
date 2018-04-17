@@ -6,7 +6,7 @@ export default Component.extend({
   layout,
   session: service('session'),
   actions: {
-    logout(user) {
+    logout() {
       this.get('session').invalidate('authenticator:mock-login');
     }
   }

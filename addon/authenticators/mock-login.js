@@ -63,7 +63,6 @@ export default Base.extend({
         'Content-Type': contentType
       })
     });
-    console.log(result);
     if (result.ok)
       return result;
     else
