@@ -3,11 +3,14 @@ import { get } from '@ember/object';
 
 const basePath='/sessions';
 const contentType = 'application/vnd.api+json';
+const supportedCredentials = 'same-origin';
+
 export default Base.extend({
   async restore() {
     const url = `${basePath}/current`;
     const result = await fetch(url,{
       type: 'GET',
+      credentials: supportedCredentials,
       headers: new Headers({
         'Content-Type': contentType
       })
@@ -40,6 +43,7 @@ export default Base.extend({
           type: "sessions"
         }
       }),
+      credentials: supportedCredentials,
       headers: new Headers({
         'Content-Type': contentType
       })
@@ -53,11 +57,13 @@ export default Base.extend({
   async invalidate() {
     const url = `${basePath}/current`;
     const result = await fetch(url,{
-      type: 'DELETE',
+      method: 'DELETE',
+      credentials: supportedCredentials,
       headers: new Headers({
         'Content-Type': contentType
       })
     });
+    console.log(result);
     if (result.ok)
       return result;
     else
