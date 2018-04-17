@@ -1,1 +1,0 @@
-export { default } from '@lblod/ember-mock-login/components/login/user-info';

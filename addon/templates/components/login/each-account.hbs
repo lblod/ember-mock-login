@@ -1,14 +1,5 @@
 {{#each accounts as |account|}}
-  <div style="cursor: pointer" class="person-info" onclick={{action 'login' account}}>
-    <div class="person-info__img">
-      {{#if user.img}}
-        <img src="{{user.img}}" alt="" />
-      {{/if}}
-    </div>
-    <div class="person-info__content">
-      <dl class="person-info__data">
-        {{yield (hash value=account display=(component 'login/user-info'))}}
-      </dl>
-    </div>
+  <div style="cursor: pointer" onClick={{action "login" account}}>
+    {{yield account}}
   </div>
 {{/each}}

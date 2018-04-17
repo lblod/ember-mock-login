@@ -1,7 +1,7 @@
 <h2 id="title">Welcome to Ember</h2>
 
 {{#if session.isAuthenticated}}
-  Logged in as {{session.account.user.firstName}} {{sesion.account.user.lastName}} with activeGroup {{session.activeGroup.name}}
+  Logged in
   {{mock-logout}}
 {{else}}
   {{#mock-login as |login|}}
@@ -9,10 +9,8 @@
       loading...
     {{else}}
       {{login.errorMessage}}
-      {{#login.each-account accounts=accounts as |row|}}
-        {{row.display label="Firstname" value= row.value.user.firstName}}
-        {{row.display label="Lastname" value =row.value.user.lastName}}
-        {{row.display label="Group" value=row.value.user.groups.name}}
+      {{#login.each-account accounts=accounts as |account|}}
+        {{account.gebruiker.firstName}} {{account.gebruiker.lastName}} {{account.gebruiker.groep.name}}
       {{/login.each-account}}
     {{/if}}
   {{/mock-login}}

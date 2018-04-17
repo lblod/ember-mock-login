@@ -8,25 +8,25 @@ export default Controller.extend({
     {
       id: 'e842a393-1252-4e06-bab4-18df36c53808',
       provider: 'mock',
-      user: {
+      gebruiker: {
         id: '1',
         firstName: 'Jane',
-        lastName: 'Doe'
-      },
-      group: {
-        id: '5ac63f89ea27dc000101cf74'
+        lastName: 'Doe',
+        groep: {
+          id: '5ac63f89ea27dc000101cf74'
+        }
       }
     },
     {
       id: "7ed41362-e636-4bf2-826c-7ee476346890",
       provider: 'mock',
-      user: {
+      gebruiker: {
         id: '2',
         firstName: 'Jimmy',
-        lastName: 'Janssens'
-      },
-      group: {
-        id: '5ac63f89ea27dc000101cf7c'
+        lastName: 'Janssens',
+        groep: {
+          id: '5ac63f89ea27dc000101cf7c'
+        }
       }
     }
   ]
