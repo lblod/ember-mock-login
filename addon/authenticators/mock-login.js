@@ -16,7 +16,7 @@ export default Base.extend({
       })
     });
     if (result.ok)
-      return result;
+      return result.json();
     else
       throw result;
   },
