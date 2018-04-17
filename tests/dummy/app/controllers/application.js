@@ -12,7 +12,7 @@ export default Controller.extend({
         id: '1',
         firstName: 'Jane',
         lastName: 'Doe',
-        groep: {
+        group: {
           id: '5ac63f89ea27dc000101cf74'
         }
       }
@@ -24,7 +24,7 @@ export default Controller.extend({
         id: '2',
         firstName: 'Jimmy',
         lastName: 'Janssens',
-        groep: {
+        group: {
           id: '5ac63f89ea27dc000101cf7c'
         }
       }
