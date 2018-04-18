@@ -4,10 +4,9 @@ import { inject as service } from '@ember/service';
 
 export default Component.extend({
   layout,
+  tagName: 'button',
   session: service('session'),
-  actions: {
-    logout() {
-      this.get('session').invalidate('authenticator:mock-login');
-    }
+  click() {
+    this.get('session').invalidate('authenticator:mock-login');
   }
 });
