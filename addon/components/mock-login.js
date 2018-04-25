@@ -12,7 +12,7 @@ export default Component.extend({
     try {
       const user = yield get(account,'gebruiker');
       const group = yield get(user, 'group');
-      const resp = yield this.get('session').authenticate('authenticator:mock-login', account, group );
+      yield this.get('session').authenticate('authenticator:mock-login', account, group );
       this.set('errorMessage', '');
     }
     catch(response) {
