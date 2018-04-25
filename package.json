@@ -1,12 +1,12 @@
 {
   "name": "@lblod/ember-mock-login",
   "version": "0.3.0",
-  "description": "The default blueprint for ember-cli addons.",
+  "description": "Ember addon mocking a login and logout component.",
   "keywords": [
     "ember-addon"
   ],
   "license": "MIT",
-  "author": "",
+  "author": "redpencil.io",
   "directories": {
     "doc": "doc",
     "test": "tests"
