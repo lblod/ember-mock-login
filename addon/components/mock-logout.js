@@ -7,6 +7,6 @@ export default Component.extend({
   tagName: 'button',
   session: service('session'),
   click() {
-    this.get('session').invalidate('authenticator:mock-login');
+    this.get('session').invalidate();
   }
 });
