@@ -16,7 +16,7 @@ export default Component.extend({
       this.set('errorMessage', '');
     }
     catch(response) {
-      if (response instanceof Response)
+      if (typeof Response !== 'undefined' && response instanceof Response)
         this.set('errorMessage', `Something went wrong, please try again later (status: ${response.status} ${response.statusText})`);
       else
         this.set('errorMessage', response.message);
