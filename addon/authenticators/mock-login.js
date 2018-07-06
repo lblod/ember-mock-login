@@ -1,6 +1,7 @@
 import Base from 'ember-simple-auth/authenticators/base';
 import { get } from '@ember/object';
-
+import fetch from 'fetch';
+import { Headers } from 'fetch';
 const basePath='/mock/sessions';
 const contentType = 'application/vnd.api+json';
 const supportedCredentials = 'same-origin';
