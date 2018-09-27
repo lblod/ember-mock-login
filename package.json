@@ -26,7 +26,7 @@
     "ember-cli-htmlbars-inline-precompile": "^1.0.0",
     "ember-concurrency": "^0.8.17",
     "ember-fetch": "^3.4.5",
-    "ember-simple-auth": "^1.6.0"
+    "ember-simple-auth": "^1.7.0"
   },
   "devDependencies": {
     "@ember/optional-features": "^0.6.3",
