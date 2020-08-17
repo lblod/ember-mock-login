@@ -15,7 +15,7 @@ Installation
 ------------------------------------------------------------------------------
 
 ```
-ember install ember-mock-login
+ember install @lblod/ember-mock-login
 ```
 
 
