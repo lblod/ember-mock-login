@@ -11,7 +11,7 @@ export default Component.extend({
   login: task( function * (account){
     this.set('errorMessage', '');
     try {
-      const user = yield get(account,'gebruiker');
+      const user = yield get(account,'user');
       const group = yield get(user, 'group');
       yield this.get('session').authenticate('authenticator:mock-login', account, group );
       this.set('errorMessage', '');

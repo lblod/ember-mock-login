@@ -10,7 +10,7 @@
     {{else}}
       {{login.errorMessage}}
       {{#login.each-account accounts=accounts as |account|}}
-        {{account.gebruiker.firstName}} {{account.gebruiker.lastName}} {{account.gebruiker.groep.name}}
+        {{account.user.firstName}} {{account.user.lastName}} {{account.user.group.name}}
       {{/login.each-account}}
     {{/if}}
   {{/mock-login}}
