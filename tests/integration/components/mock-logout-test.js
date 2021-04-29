@@ -10,15 +10,15 @@ module('Integration | Component | mock-logout', function(hooks) {
     // Set any properties with this.set('myProperty', 'value');
     // Handle any actions with this.set('myAction', function(val) { ... });
 
-    await render(hbs`{{mock-logout}}`);
+    await render(hbs`<MockLogout />`);
 
-    assert.dom(this.element).hasText('');
+    assert.dom(this.element).hasText('Logout');
 
     // Template block usage:
     await render(hbs`
-      {{#mock-logout}}
+      <MockLogout>
         template block text
-      {{/mock-logout}}
+      </MockLogout>
     `);
 
     assert.dom(this.element).hasText('template block text');

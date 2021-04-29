@@ -10,15 +10,10 @@ module('Integration | Component | mock-login', function(hooks) {
     // Set any properties with this.set('myProperty', 'value');
     // Handle any actions with this.set('myAction', function(val) { ... });
 
-    await render(hbs`{{mock-login}}`);
-
-    assert.dom(this.element).hasText('');
-
-    // Template block usage:
     await render(hbs`
-      {{#mock-login}}
+      <MockLogin>
         template block text
-      {{/mock-login}}
+      </MockLogin>
     `);
 
     assert.dom(this.element).hasText('template block text');
