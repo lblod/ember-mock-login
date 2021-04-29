@@ -8,8 +8,10 @@ export default class MockLoginComponent extends Component {
   @service session;
   @tracked errorMessage;
 
-  @task
-  * loginTask(account) {
+  // This uses the "not so clean" alternative to support both ember-concurrency v1 and v2
+  // without having to install ember-concurrency-decorators.
+  // TODO: use "pretty" decorators once all projects are using ember-concurrency v2
+  @(task(function*(account) {
     this.errorMessage = '';
 
     try {
@@ -23,5 +25,6 @@ export default class MockLoginComponent extends Component {
       else
         this.errorMessage = response.message;
     }
-  }
+  }))
+  loginTask;
 }
