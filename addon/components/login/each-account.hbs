@@ -1,0 +1,8 @@
+<div ...attributes>
+  {{#each @accounts as |account|}}
+    {{!template-lint-disable no-inline-styles no-invalid-interactive}}
+    <div style="cursor: pointer;" {{on "click" (fn this.login account)}}>
+      {{yield account}}
+    </div>
+  {{/each}}
+</div>

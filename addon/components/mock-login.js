@@ -1,31 +1,27 @@
-import Component from '@ember/component';
-import layout from '../templates/components/mock-login';
+import Component from '@glimmer/component';
+import { tracked } from '@glimmer/tracking';
 import { inject as service } from '@ember/service';
-import { get } from '@ember/object';
 import { task } from 'ember-concurrency';
 import { Response } from 'fetch';
 
-export default Component.extend({
-  layout,
-  session: service('session'),
-  login: task( function * (account){
-    this.set('errorMessage', '');
+export default class MockLoginComponent extends Component {
+  @service session;
+  @tracked errorMessage;
+
+  @task
+  * loginTask(account) {
+    this.errorMessage = '';
+
     try {
-      const user = yield get(account,'gebruiker');
-      const group = yield get(user, 'group');
-      yield this.get('session').authenticate('authenticator:mock-login', account, group );
-      this.set('errorMessage', '');
+      const user = yield account.get('gebruiker');
+      const group = yield user.get('group');
+      yield this.session.authenticate('authenticator:mock-login', account, group);
     }
     catch(response) {
       if (response instanceof Response)
-        this.set('errorMessage', `Something went wrong, please try again later (status: ${response.status} ${response.statusText})`);
+        this.errorMessage = `Something went wrong, please try again later (status: ${response.status} ${response.statusText})`;
       else
-        this.set('errorMessage', response.message);
-    }
-  }),
-  actions: {
-    login(account) {
-      this.get('login').perform(account);
+        this.errorMessage = response.message;
     }
   }
-});
+}
