@@ -14,7 +14,8 @@ export default class ApplicationController extends Controller {
         firstName: 'Jane',
         lastName: 'Doe',
         group: EmberObject.create({
-          id: '5ac63f89ea27dc000101cf74'
+          id: '5ac63f89ea27dc000101cf74',
+          name: "Beheerder"
         })
       })
     }),
@@ -26,7 +27,8 @@ export default class ApplicationController extends Controller {
         firstName: 'Jimmy',
         lastName: 'Janssens',
         group: EmberObject.create({
-          id: '5ac63f89ea27dc000101cf7c'
+          id: '5ac63f89ea27dc000101cf7c',
+          name: "Werknemer"
         })
       })
     })
