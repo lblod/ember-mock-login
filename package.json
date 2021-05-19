@@ -1,6 +1,6 @@
 {
   "name": "@lblod/ember-mock-login",
-  "version": "0.5.0-beta",
+  "version": "0.5.0",
   "description": "Ember addon mocking a login and logout component.",
   "keywords": [
     "ember-addon"
