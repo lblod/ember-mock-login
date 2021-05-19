@@ -11,13 +11,11 @@ export default class MockLoginComponent extends Component {
   // This uses the "not so clean" alternative to support both ember-concurrency v1 and v2
   // without having to install ember-concurrency-decorators.
   // TODO: use "pretty" decorators once all projects are using ember-concurrency v2
-  @(task(function*(account) {
+  @(task(function*(accountId, groupId) {
     this.errorMessage = '';
 
     try {
-      const user = yield account.get('gebruiker');
-      const group = yield user.get('group');
-      yield this.session.authenticate('authenticator:mock-login', account, group);
+      yield this.session.authenticate('authenticator:mock-login', accountId, groupId);
     }
     catch(response) {
       if (response instanceof Response)

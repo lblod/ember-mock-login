@@ -21,7 +21,7 @@ export default class MockLoginAuthenticator extends BaseAuthenticator {
       throw result;
   }
 
-  async authenticate(account, group) {
+  async authenticate(accountId, groupId) {
     const result = await fetch(basePath, {
       method: 'POST',
       body: JSON.stringify({
@@ -29,13 +29,13 @@ export default class MockLoginAuthenticator extends BaseAuthenticator {
           relationships: {
             account:{
               data: {
-                id: account.get('id'),
+                id: accountId,
                 type: "accounts"
               }
             },
             group: {
               data: {
-                id: group.get('id'),
+                id: groupId,
                 type: "groups"
               }
             }

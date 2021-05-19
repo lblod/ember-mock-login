@@ -14,9 +14,22 @@
         {{login.errorMessage}}
       {{/if}}
 
+      <h2>Use the each-account component</h2>
       <login.each-account @accounts={{this.accounts}} as |account|>
-        {{account.gebruiker.firstName}} {{account.gebruiker.lastName}} {{account.gebruiker.groep.name}}
+        <strong>{{account.gebruiker.firstName}} {{account.gebruiker.lastName}}</strong> {{account.gebruiker.group.name}}
       </login.each-account>
+
+
+      <h2>or bring your own html!</h2>
+      <ul>
+        {{#each this.accounts as |account|}}
+          <li>
+            <button type="button" {{on "click" (fn login.login account.id account.gebruiker.group.id)}}>
+              <strong>{{account.gebruiker.firstName}} {{account.gebruiker.lastName}}</strong> {{account.gebruiker.group.name}}
+            </button>
+          </li>
+        {{/each}}
+      </ul>
     {{/if}}
   </MockLogin>
 {{/if}}
