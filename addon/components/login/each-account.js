@@ -1,11 +1,9 @@
-import Component from '@ember/component';
-import layout from '../../templates/components/login/each-account';
+import Component from '@glimmer/component';
+import { action } from '@ember/object';
 
-export default Component.extend({
-  layout,
-  actions: {
-    login(account) {
-      this.get('login')(account);
-    }
+export default class EachAccountComponent extends Component {
+  @action
+  login(account) {
+    this.args.login(account);
   }
-});
+}

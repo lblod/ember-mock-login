@@ -1,12 +1,12 @@
-import Component from '@ember/component';
-import layout from '../templates/components/mock-logout';
+import Component from '@glimmer/component';
+import { action } from '@ember/object';
 import { inject as service } from '@ember/service';
 
-export default Component.extend({
-  layout,
-  tagName: 'button',
-  session: service('session'),
-  click() {
-    this.get('session').invalidate();
+export default class MockLogoutComponent extends Component {
+  @service session;
+
+  @action
+  logout() {
+    this.session.invalidate();
   }
-});
+}
