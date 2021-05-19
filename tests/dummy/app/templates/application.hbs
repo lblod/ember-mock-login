@@ -1,18 +1,24 @@
+{{page-title "Dummy"}}
+
 <h2 id="title">Welcome to Ember</h2>
 
-{{#if session.isAuthenticated}}
+{{#if this.session.isAuthenticated}}
   Logged in
-  {{mock-logout}}
+  <MockLogout />
 {{else}}
-  {{#mock-login as |login|}}
-    {{#if login.loading}}
+  <MockLogin as |login|>
+    {{#if login.isLoading}}
       loading...
     {{else}}
-      {{login.errorMessage}}
-      {{#login.each-account accounts=accounts as |account|}}
+      {{#if login.errorMessage}}
+        {{login.errorMessage}}
+      {{/if}}
+
+      <login.each-account @accounts={{this.accounts}} as |account|>
         {{account.gebruiker.firstName}} {{account.gebruiker.lastName}} {{account.gebruiker.groep.name}}
-      {{/login.each-account}}
+      </login.each-account>
     {{/if}}
-  {{/mock-login}}
+  </MockLogin>
 {{/if}}
+
 {{outlet}}

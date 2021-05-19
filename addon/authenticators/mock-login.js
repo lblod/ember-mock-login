@@ -1,12 +1,11 @@
-import Base from 'ember-simple-auth/authenticators/base';
-import { get } from '@ember/object';
+import BaseAuthenticator from 'ember-simple-auth/authenticators/base';
 import fetch from 'fetch';
 import { Headers } from 'fetch';
 const basePath='/mock/sessions';
 const contentType = 'application/vnd.api+json';
 const supportedCredentials = 'same-origin';
 
-export default Base.extend({
+export default class MockLoginAuthenticator extends BaseAuthenticator {
   async restore() {
     const url = `${basePath}/current`;
     const result = await fetch(url,{
@@ -20,7 +19,7 @@ export default Base.extend({
       return result.json();
     else
       throw result;
-  },
+  }
 
   async authenticate(account, group) {
     const result = await fetch(basePath, {
@@ -30,13 +29,13 @@ export default Base.extend({
           relationships: {
             account:{
               data: {
-                id: get(account, 'id'),
+                id: account.get('id'),
                 type: "accounts"
               }
             },
             group: {
               data: {
-                id: get(group, 'id'),
+                id: group.get('id'),
                 type: "groups"
               }
             }
@@ -53,7 +52,7 @@ export default Base.extend({
       return result.json();
     else
       throw result;
-  },
+  }
 
   async invalidate() {
     const url = `${basePath}/current`;
@@ -69,4 +68,4 @@ export default Base.extend({
     else
       throw result;
   }
-});
+}

@@ -10,17 +10,16 @@ module('Integration | Component | login/each-account', function(hooks) {
     // Set any properties with this.set('myProperty', 'value');
     // Handle any actions with this.set('myAction', function(val) { ... });
 
-    await render(hbs`{{login/each-account}}`);
-
-    assert.dom(this.element).hasText('');
-
-    // Template block usage:
+    this.set('accounts', [
+      "test",
+      "account"
+    ])
     await render(hbs`
-      {{#login/each-account}}
-        template block text
-      {{/login/each-account}}
+      <Login::EachAccount @accounts={{this.accounts}} as |account|>
+        {{account}}
+      </Login::EachAccount>
     `);
 
-    assert.dom(this.element).hasText('template block text');
+    assert.dom(this.element).hasText('test account');
   });
 });

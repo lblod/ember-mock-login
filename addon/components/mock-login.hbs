@@ -1,0 +1,8 @@
+<div ...attributes>
+  {{yield (hash
+    errorMessage=this.errorMessage
+    loading=this.loginTask.isRunning
+    isLoading=this.loginTask.isRunning
+    each-account=(component 'login/each-account' login=(perform this.loginTask))
+  )}}
+</div>
