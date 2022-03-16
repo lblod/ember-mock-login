@@ -30,7 +30,7 @@
     "ember-cli-htmlbars": "^5.7.1",
     "ember-concurrency": "^1.0.0 || ^2.0.1",
     "ember-fetch": "^8.0.4",
-    "ember-simple-auth": "^3.1.0"
+    "ember-simple-auth": "^3.1.0 || ^4.2.1"
   },
   "devDependencies": {
     "@ember/optional-features": "^2.0.0",
