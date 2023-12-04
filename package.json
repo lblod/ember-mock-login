@@ -33,7 +33,6 @@
     "ember-auto-import": "^2.0.0",
     "ember-cli-babel": "^8.2.0",
     "ember-cli-htmlbars": "^6.3.0",
-    "ember-concurrency": "^1.0.0 || ^2.0.1",
     "ember-fetch": "^8.0.4"
   },
   "devDependencies": {

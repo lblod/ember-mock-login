@@ -1,9 +1,9 @@
 <div ...attributes>
   {{yield (hash
     errorMessage=this.errorMessage
-    loading=this.loginTask.isRunning
-    isLoading=this.loginTask.isRunning
-    login=(perform this.loginTask)
-    each-account=(component 'login/each-account' login=(perform this.loginTask))
+    loading=this.isRunning
+    isLoading=this.isRunning
+    login=this.login
+    each-account=(component 'login/each-account' login=this.login)
   )}}
 </div>
