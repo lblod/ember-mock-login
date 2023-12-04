@@ -4,7 +4,12 @@
 
 {{#if this.session.isAuthenticated}}
   Logged in
-  <MockLogout />
+  <button
+    type="button"
+    {{on "click" this.logout}}
+  >
+    Logout
+  </button>
 {{else}}
   <MockLogin as |login|>
     {{#if login.isLoading}}
@@ -14,13 +19,7 @@
         {{login.errorMessage}}
       {{/if}}
 
-      <h2>Use the each-account component</h2>
-      <login.each-account @accounts={{this.accounts}} as |account|>
-        <strong>{{account.gebruiker.firstName}} {{account.gebruiker.lastName}}</strong> {{account.gebruiker.group.name}}
-      </login.each-account>
-
-
-      <h2>or bring your own html!</h2>
+      <h2>Bring your own html!</h2>
       <ul>
         {{#each this.accounts as |account|}}
           <li>

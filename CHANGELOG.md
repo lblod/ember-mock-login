@@ -1,4 +1,10 @@
 
+## 0.8.0 (2023-12-04)
+
+#### :rocket: Enhancement
+* [#18](https://github.com/lblod/ember-mock-login/pull/18) Deprecate the `<MockLogout>` and `<login.each-account>` components ([@Windvis](https://github.com/Windvis))
+
+
 ## 0.7.0 (2022-03-16)
 
 #### :rocket: Enhancement
