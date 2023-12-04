@@ -1,33 +1,28 @@
-ember-mock-login
-==============================================================================
+# @lblod/ember-mock-login
 
 [Short description of the addon.]
 
 
-Compatibility
-------------------------------------------------------------------------------
+## Compatibility
 
-* Ember.js v3.16 or above
-* Ember CLI v2.13 or above
-* Node.js v10 or above
+* Ember.js v4.8 or above
+* Ember CLI v4.8 or above
+* Node.js v18 or above
 
 
-Installation
-------------------------------------------------------------------------------
+## Installation
 
 ```
 ember install @lblod/ember-mock-login
 ```
 
 
-Usage
-------------------------------------------------------------------------------
+## Usage
 
 [Longer description of how to use the addon in apps.]
 
 
-Contributing
-------------------------------------------------------------------------------
+## Contributing
 
 See the [Contributing](CONTRIBUTING.md) guide for details.
 
@@ -51,7 +46,6 @@ Simply run `GITHUB_AUTH=your-access-token npm run release` and follow the prompt
 After the new tag is created and pushed Drone will take care of publishing the package to npm.
 
 
-License
-------------------------------------------------------------------------------
+## License
 
 This project is licensed under the [MIT License](LICENSE.md).
