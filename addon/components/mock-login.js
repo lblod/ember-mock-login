@@ -15,12 +15,15 @@ export default class MockLoginComponent extends Component {
     this.isRunning = true;
 
     try {
-      await this.session.authenticate('authenticator:mock-login', accountId, groupId);
-    } catch(response) {
+      await this.session.authenticate(
+        'authenticator:mock-login',
+        accountId,
+        groupId,
+      );
+    } catch (response) {
       if (response instanceof Response)
         this.errorMessage = `Something went wrong, please try again later (status: ${response.status} ${response.statusText})`;
-      else
-        this.errorMessage = response.message;
+      else this.errorMessage = response.message;
     } finally {
       this.isRunning = false;
     }
