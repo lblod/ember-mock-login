@@ -1,4 +1,11 @@
 
+## 0.10.0 (2023-12-06)
+
+#### :boom: Breaking Change
+* [#23](https://github.com/lblod/ember-mock-login/pull/23) Remove ember-fetch ([@Windvis](https://github.com/Windvis))
+
+
+
 ## 0.9.0 (2023-12-05)
 
 #### :boom: Breaking Change
