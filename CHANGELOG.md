@@ -1,4 +1,13 @@
 
+## 0.10.1 (2024-11-25)
+
+#### :bug: Bug Fix
+* [#25](https://github.com/lblod/ember-mock-login/pull/25) Add `@ember/test-waiters` ([@Windvis](https://github.com/Windvis))
+
+#### Committers: 1
+- Sam Van Campenhout ([@Windvis](https://github.com/Windvis))
+
+
 ## 0.10.0 (2023-12-06)
 
 #### :boom: Breaking Change
