@@ -1,18 +1,21 @@
 
+
+## 0.10.2 (2024-11-26)
+
+#### :bug: Bug Fix
+* [#29](https://github.com/lblod/ember-mock-login/pull/29) Fix a timing issue with the authenticator methods in tests ([@Windvis](https://github.com/Windvis))
+
+
 ## 0.10.1 (2024-11-25)
 
 #### :bug: Bug Fix
 * [#25](https://github.com/lblod/ember-mock-login/pull/25) Add `@ember/test-waiters` ([@Windvis](https://github.com/Windvis))
-
-#### Committers: 1
-- Sam Van Campenhout ([@Windvis](https://github.com/Windvis))
 
 
 ## 0.10.0 (2023-12-06)
 
 #### :boom: Breaking Change
 * [#23](https://github.com/lblod/ember-mock-login/pull/23) Remove ember-fetch ([@Windvis](https://github.com/Windvis))
-
 
 
 ## 0.9.0 (2023-12-05)
