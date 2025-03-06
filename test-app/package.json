@@ -91,5 +91,10 @@
   },
   "ember": {
     "edition": "octane"
+  },
+  "msw": {
+    "workerDirectory": [
+      "public"
+    ]
   }
 }
