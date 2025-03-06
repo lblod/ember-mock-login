@@ -1,8 +1,8 @@
 {
   "private": true,
-  "repository": "",
+  "repository": "https://github.com/lblod/ember-mock-login",
   "license": "MIT",
-  "author": "",
+  "author": "redpencil.io",
   "scripts": {
     "build": "npm run build --workspace ember-mock-login",
     "lint": "npm run lint --workspaces --if-present",
@@ -12,7 +12,8 @@
     "start:addon": "npm start --workspace ember-mock-login -- --no-watch.clearScreen",
     "start:test-app": "npm start --workspace test-app",
     "test": "npm run test:ember --workspace test-app",
-    "test:ember": "npm run test:ember --workspaces --if-present"
+    "test:ember": "npm run test:ember --workspaces --if-present",
+    "release": "npm run release --workspace ember-mock-login"
   },
   "packageManager": "npm@11.0.0",
   "devDependencies": {
