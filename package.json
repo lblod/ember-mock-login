@@ -11,7 +11,7 @@
     "start": "concurrently 'npm:start:*' --restart-after 5000 --prefixColors auto",
     "start:addon": "npm start --workspace ember-mock-login -- --no-watch.clearScreen",
     "start:test-app": "npm start --workspace test-app",
-    "test": "npm run test --workspaces --if-present",
+    "test": "npm run test:ember --workspace test-app",
     "test:ember": "npm run test:ember --workspaces --if-present"
   },
   "packageManager": "npm@11.0.0",
