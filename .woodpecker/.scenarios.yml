@@ -1,0 +1,15 @@
+matrix:
+  scenario:
+    - ember-lts-4.8
+    - ember-lts-5.12
+    - embroider-optimized
+steps:
+  - name: ${scenario}
+    image: danlynn/ember-cli:6.2.1-node_22.14
+    commands:
+      - npm ci
+      - npm exec --workspace=test-app -- ember try:one ${scenario} --skip-cleanup
+
+when:
+  event:
+    - pull_request
