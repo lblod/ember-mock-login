@@ -13,6 +13,9 @@ module.exports = async function () {
             'ember-source': '~4.8.0',
             'ember-load-initializers': '^2.1.2', //v3 requires ember-source v5
           },
+          overrides: {
+            'ember-source': '~4.8.0',
+          }
         },
       },
       {
