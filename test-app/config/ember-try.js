@@ -11,6 +11,7 @@ module.exports = async function () {
         npm: {
           devDependencies: {
             'ember-source': '~4.8.0',
+            'ember-load-initializers': '^2.1.2' //v3 requires ember-source v5
           },
         },
       },
@@ -19,6 +20,7 @@ module.exports = async function () {
         npm: {
           devDependencies: {
             'ember-source': '~4.12.0',
+            'ember-load-initializers': '^2.1.2' //v3 requires ember-source v5
           },
         },
       },
