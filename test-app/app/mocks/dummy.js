@@ -54,7 +54,7 @@ export const mockLoginServiceHandlers = {
       await delay();
 
       return HttpResponse.json(sessionData);
-    } catch (error) {
+    } catch {
       throw new Error('Invalid session');
     }
   }),
