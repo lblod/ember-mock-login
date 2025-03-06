@@ -1,4 +1,4 @@
-# ember-mock-login
+# @lblod/ember-mock-login
 
 [Short description of the addon.]
 
@@ -10,7 +10,7 @@
 ## Installation
 
 ```
-ember install ember-mock-login
+npm install --save-dev @lblod/ember-mock-login
 ```
 
 ## Usage

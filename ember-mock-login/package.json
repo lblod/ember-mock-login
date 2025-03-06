@@ -91,6 +91,10 @@
   "ember-addon": {
     "version": 2,
     "type": "addon",
-    "main": "addon-main.cjs"
+    "main": "addon-main.cjs",
+    "app-js": {
+      "./authenticators/mock-login.js": "./dist/_app_/authenticators/mock-login.js",
+      "./components/mock-login.js": "./dist/_app_/components/mock-login.js"
+    }
   }
 }
