@@ -7,10 +7,12 @@ steps:
   lint:
     image: danlynn/ember-cli:6.2.1-node_22.14
     commands:
+      - corepack enable
       - pnpm lint
   test:
     image: danlynn/ember-cli:6.2.1-node_22.14
     commands:
+      - corepack enable
       - pnpm test
 when:
   event:
