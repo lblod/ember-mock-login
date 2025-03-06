@@ -15,7 +15,7 @@ module.exports = async function () {
           },
           overrides: {
             'ember-source': '~4.8.0',
-          }
+          },
         },
       },
       {
