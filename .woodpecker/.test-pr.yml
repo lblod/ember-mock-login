@@ -2,15 +2,16 @@ steps:
   install:
     image: danlynn/ember-cli:6.2.1-node_22.14
     commands:
-      - npm ci
+      - corepack enable
+      - pnpm install --frozen-lockfile
   lint:
     image: danlynn/ember-cli:6.2.1-node_22.14
     commands:
-      - npm run lint
+      - pnpm lint
   test:
     image: danlynn/ember-cli:6.2.1-node_22.14
     commands:
-      - npm run test
+      - pnpm test
 when:
   event:
     - pull_request

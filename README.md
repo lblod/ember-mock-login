@@ -10,7 +10,7 @@
 ## Installation
 
 ```
-npm install --save-dev @lblod/ember-mock-login
+ember install ember-mock-login
 ```
 
 ## Usage

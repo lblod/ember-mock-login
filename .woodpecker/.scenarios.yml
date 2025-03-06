@@ -7,8 +7,9 @@ steps:
   - name: ${scenario}
     image: danlynn/ember-cli:6.2.1-node_22.14
     commands:
-      - npm ci
-      - npm exec --workspace=test-app -- ember try:one ${scenario} --skip-cleanup
+      - corepack enable
+      - pnpm install --frozen-lockfile
+      - pnpm --filter test-app exec ember try:one ${scenario} --skip-cleanup
 
 when:
   event:

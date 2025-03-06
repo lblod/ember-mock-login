@@ -5,6 +5,7 @@ const { embroiderSafe, embroiderOptimized } = require('@embroider/test-setup');
 
 module.exports = async function () {
   return {
+    usePnpm: true,
     scenarios: [
       {
         name: 'ember-lts-4.8',
@@ -12,9 +13,6 @@ module.exports = async function () {
           devDependencies: {
             'ember-source': '~4.8.0',
             'ember-load-initializers': '^2.1.2', //v3 requires ember-source v5
-          },
-          overrides: {
-            'ember-source': '~4.8.0',
           },
         },
       },
