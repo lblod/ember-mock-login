@@ -1,5 +1,14 @@
 
 
+## 0.11.0 (2025-03-10)
+
+#### :boom: Breaking Change
+* [#31](https://github.com/lblod/ember-mock-login/pull/31) V2 Addon conversion ([@Windvis](https://github.com/Windvis))
+
+#### :rocket: Enhancement
+* [#33](https://github.com/lblod/ember-mock-login/pull/33) Resolve the `importing-inject-from-ember-service` deprecation ([@Windvis](https://github.com/Windvis))
+
+
 ## 0.10.2 (2024-11-26)
 
 #### :bug: Bug Fix
