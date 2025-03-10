@@ -34,9 +34,9 @@ If you want to preview the changelog that will be generated before starting the 
 `GITHUB_AUTH=your-access-token npx lerna-changelog`
 
 ### Creating a new release
-Simply run `GITHUB_AUTH=your-access-token npm run release` and follow the prompts.
+Simply run `GITHUB_AUTH=your-access-token pnpm release` and follow the prompts.
 
-After the new tag is created and pushed Drone will take care of publishing the package to npm.
+After the new tag is created and pushed Woodpecker will take care of publishing the package to npm.
 
 ## License
 
