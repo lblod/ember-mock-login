@@ -10,7 +10,6 @@ export default class MockLoginAuthenticator extends BaseAuthenticator {
   async restore() {
     const url = `${basePath}/current`;
     const result = await fetch(url, {
-      type: 'GET',
       credentials: supportedCredentials,
       headers: new Headers({
         'Content-Type': contentType,
@@ -21,7 +20,7 @@ export default class MockLoginAuthenticator extends BaseAuthenticator {
   }
 
   @waitFor
-  async authenticate(accountId, groupId) {
+  async authenticate(accountId: string, groupId: string) {
     const result = await fetch(basePath, {
       method: 'POST',
       body: JSON.stringify({
