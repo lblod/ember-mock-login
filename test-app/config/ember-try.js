@@ -59,6 +59,14 @@ module.exports = async function () {
       },
       embroiderSafe(),
       embroiderOptimized(),
+      {
+        name: 'ember-simple-auth-v6',
+        npm: {
+          devDependencies: {
+            'ember-simple-auth': '^6.0.0',
+          },
+        },
+      },
     ],
   };
 };
