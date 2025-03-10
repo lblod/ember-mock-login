@@ -6,7 +6,7 @@ steps:
       - pnpm install --frozen-lockfile
       - pnpm config --location project set '//registry.npmjs.org/:_authToken' $NPM_ACCESS_TOKEN
       - pnpm build
-      - pnpm publish ember-address-search --access public --tag latest --no-git-checks
+      - pnpm publish ember-mock-login --access public --tag latest --no-git-checks
     secrets: [npm_access_token]
 when:
   event: tag
