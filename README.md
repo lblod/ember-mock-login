@@ -2,33 +2,26 @@
 
 [Short description of the addon.]
 
-
 ## Compatibility
 
-* Ember.js v4.8 or above
-* Ember CLI v4.8 or above
-* Node.js v18 or above
-
+- Ember.js v4.8 or above
+- Embroider or ember-auto-import v2
 
 ## Installation
 
 ```
-ember install @lblod/ember-mock-login
+ember install ember-mock-login
 ```
-
 
 ## Usage
 
 [Longer description of how to use the addon in apps.]
 
-
 ## Contributing
 
 See the [Contributing](CONTRIBUTING.md) guide for details.
 
-
-Releasing a new version
-------------------------------------------------------------------------------
+## Releasing a new version
 We use [`release-it`](https://github.com/release-it/release-it) to handle our release flow and [`lerna-changelog`](https://github.com/lerna/lerna-changelog) to generate the changelog for that release.
 
 ### Prerequisites
@@ -44,7 +37,6 @@ If you want to preview the changelog that will be generated before starting the 
 Simply run `GITHUB_AUTH=your-access-token npm run release` and follow the prompts.
 
 After the new tag is created and pushed Drone will take care of publishing the package to npm.
-
 
 ## License
 

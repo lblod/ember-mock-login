@@ -1,0 +1,13 @@
+steps:
+  release:
+    image: node:22.14
+    commands:
+      - corepack enable
+      - pnpm install --frozen-lockfile
+      - pnpm config --location project set '//registry.npmjs.org/:_authToken' $NPM_ACCESS_TOKEN
+      - pnpm build
+      - pnpm publish ember-address-search --access public --tag latest --no-git-checks
+    secrets: [npm_access_token]
+when:
+  event: tag
+  ref: refs/tags/v*
