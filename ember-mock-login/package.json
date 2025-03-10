@@ -9,10 +9,6 @@
   "license": "MIT",
   "author": "redpencil.io",
   "exports": {
-    ".": {
-      "types": "./declarations/index.d.ts",
-      "default": "./dist/index.js"
-    },
     "./*": {
       "types": "./declarations/*.d.ts",
       "default": "./dist/*.js"
