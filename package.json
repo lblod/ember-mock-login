@@ -13,7 +13,7 @@
     "start:test-app": "pnpm --filter test-app start",
     "test": "pnpm --filter '*' test",
     "test:ember": "pnpm --filter '*' test:ember",
-    "release": "pnpm release --filter ember-mock-login"
+    "release": "pnpm --filter ember-mock-login release"
   },
   "packageManager": "pnpm@10.5.0",
   "devDependencies": {
