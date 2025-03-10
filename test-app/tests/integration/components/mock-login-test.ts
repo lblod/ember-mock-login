@@ -1,7 +1,7 @@
 import { module, test } from 'qunit';
 import { setupRenderingTest } from 'ember-qunit';
 import { click, find, render, settled, waitUntil } from '@ember/test-helpers';
-import hbs from 'htmlbars-inline-precompile';
+import { hbs } from 'ember-cli-htmlbars';
 import { dummyAppWorker } from 'test-app/mocks/dummy';
 
 import { setupWorker } from 'msw/browser';
@@ -15,7 +15,7 @@ module('Integration | Component | mock-login', function (hooks) {
     await worker.start();
 
     const session = this.owner.lookup('service:session');
-    assert.false(session.isAuthenticated);
+    assert.false(session?.isAuthenticated);
 
     const LOADING_STATE = '[data-test-loading]';
 
@@ -28,11 +28,11 @@ module('Integration | Component | mock-login', function (hooks) {
     `);
 
     assert.dom(LOADING_STATE).hasText('false');
-    click('button'); // We intentionally don't await the click so we can test the loading state
+    void click('button'); // We intentionally don't await the click so we can test the loading state
 
     await waitUntil(
       function () {
-        return find(LOADING_STATE).textContent.includes('true');
+        return find(LOADING_STATE)?.textContent?.includes('true');
       },
       { timeout: 2000 },
     );
@@ -59,7 +59,7 @@ module('Integration | Component | mock-login', function (hooks) {
   });
 
   test('it yields an error message if the login request fails', async function (assert) {
-    const failedLoginHandler = http.post('/mock/sessions', async () => {
+    const failedLoginHandler = http.post('/mock/sessions', () => {
       return new HttpResponse('account not found.', { status: 400 });
     });
 
