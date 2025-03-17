@@ -1,5 +1,11 @@
 
 
+## 0.12.0 (2025-03-17)
+
+#### :rocket: Enhancement
+* [#35](https://github.com/lblod/ember-mock-login/pull/35) Add support for ember-simple-auth v7 ([@Windvis](https://github.com/Windvis))
+
+
 ## 0.11.0 (2025-03-10)
 
 #### :boom: Breaking Change
