@@ -1,5 +1,11 @@
 
 
+## 0.13.0 (2025-03-20)
+
+#### :rocket: Enhancement
+* [#34](https://github.com/lblod/ember-mock-login/pull/34) Add TypeScript types ([@Windvis](https://github.com/Windvis))
+
+
 ## 0.12.0 (2025-03-17)
 
 #### :rocket: Enhancement
