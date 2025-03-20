@@ -1,10 +1,17 @@
 import { setupWorker } from 'msw/browser';
-import { delay, http, HttpResponse } from 'msw';
+import { delay, http, HttpResponse, type JsonBodyType } from 'msw';
 
 // https://github.com/lblod/mock-login-service/tree/master#mock-login-microservice
 export const mockLoginServiceHandlers = {
   login: http.post('/mock/sessions', async ({ request }) => {
-    const requestBody = await request.json();
+    const requestBody = (await request.json()) as {
+      data: {
+        relationships: {
+          account: { data: { id: string } };
+          group: { data: { id: string } };
+        };
+      };
+    };
     const sessionId = crypto.randomUUID();
     const accountId = requestBody.data.relationships.account.data.id;
     const groupId = requestBody.data.relationships.group.data.id;
@@ -49,8 +56,14 @@ export const mockLoginServiceHandlers = {
     const ESA_LOCAL_STORAGE_KEY = 'ember_simple_auth-session';
     const storedSessionData = localStorage.getItem(ESA_LOCAL_STORAGE_KEY);
 
+    if (!storedSessionData) {
+      return HttpResponse.json();
+    }
+
     try {
-      const sessionData = JSON.parse(storedSessionData);
+      const sessionData = JSON.parse(
+        storedSessionData,
+      ) as unknown as JsonBodyType;
       await delay();
 
       return HttpResponse.json(sessionData);

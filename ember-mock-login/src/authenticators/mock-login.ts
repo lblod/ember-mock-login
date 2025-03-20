@@ -10,18 +10,18 @@ export default class MockLoginAuthenticator extends BaseAuthenticator {
   async restore() {
     const url = `${basePath}/current`;
     const result = await fetch(url, {
-      type: 'GET',
       credentials: supportedCredentials,
       headers: new Headers({
         'Content-Type': contentType,
       }),
     });
-    if (result.ok) return result.json();
+    if (result.ok) return (await result.json()) as unknown;
+    // eslint-disable-next-line @typescript-eslint/only-throw-error
     else throw result;
   }
 
   @waitFor
-  async authenticate(accountId, groupId) {
+  async authenticate(accountId: string, groupId: string) {
     const result = await fetch(basePath, {
       method: 'POST',
       body: JSON.stringify({
@@ -48,7 +48,8 @@ export default class MockLoginAuthenticator extends BaseAuthenticator {
         'Content-Type': contentType,
       }),
     });
-    if (result.ok) return result.json();
+    if (result.ok) return (await result.json()) as unknown;
+    // eslint-disable-next-line @typescript-eslint/only-throw-error
     else throw result;
   }
 
@@ -63,6 +64,7 @@ export default class MockLoginAuthenticator extends BaseAuthenticator {
       }),
     });
     if (result.ok) return result;
+    // eslint-disable-next-line @typescript-eslint/only-throw-error
     else throw result;
   }
 }

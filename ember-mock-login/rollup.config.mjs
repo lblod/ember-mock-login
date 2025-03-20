@@ -20,9 +20,7 @@ export default {
     // up your addon's public API. Also make sure your package.json#exports
     // is aligned to the config here.
     // See https://github.com/embroider-build/embroider/blob/main/docs/v2-faq.md#how-can-i-define-the-public-exports-of-my-addon
-    addon.publicEntrypoints(['**/*.js']),
-    // TODO: enable the index.js and template-registry.js entrypoints once we use them
-    // addon.publicEntrypoints(['**/*.js', 'index.js', 'template-registry.js']),
+    addon.publicEntrypoints(['**/*.js', 'template-registry.js']),
 
     // These are the modules that should get reexported into the traditional
     // "app" tree. Things in here should also be in publicEntrypoints above, but
@@ -58,8 +56,7 @@ export default {
     addon.gjs(),
 
     // Emit .d.ts declaration files
-    // TODO: enable this once we convert everything to TypeScript
-    // addon.declarations('declarations'),
+    addon.declarations('declarations'),
 
     // addons are allowed to contain imports of .css files, which we want rollup
     // to leave alone and keep in the published output.
