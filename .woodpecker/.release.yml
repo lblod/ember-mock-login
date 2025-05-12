@@ -7,7 +7,9 @@ steps:
       - pnpm config --location project set '//registry.npmjs.org/:_authToken' $NPM_ACCESS_TOKEN
       - pnpm build
       - pnpm publish ember-mock-login --access public --tag latest --no-git-checks
-    secrets: [npm_access_token]
+    environment:
+      NPM_ACCESS_TOKEN:
+        from_secret: npm_access_token
 when:
   event: tag
   ref: refs/tags/v*
