@@ -1,5 +1,11 @@
 
 
+## 0.14.0 (2025-05-12)
+
+#### :rocket: Enhancement
+* [#38](https://github.com/lblod/ember-mock-login/pull/38) Widen the `ember-simple-auth` peerDep range ([@Windvis](https://github.com/Windvis))
+
+
 ## 0.13.0 (2025-03-20)
 
 #### :rocket: Enhancement
